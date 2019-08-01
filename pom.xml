@@ -11,6 +11,8 @@
         <module>static-resource</module>
         <module>file-upload</module>
         <module>jsp</module>
+        <module>freemarker</module>
+        <module>thymeleaf</module>
     </modules>
 
     <parent>
