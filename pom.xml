@@ -9,6 +9,7 @@
         <module>filter</module>
         <module>listener</module>
         <module>static-resource</module>
+        <module>file-upload</module>
     </modules>
 
     <parent>
