@@ -10,6 +10,7 @@
         <module>listener</module>
         <module>static-resource</module>
         <module>file-upload</module>
+        <module>jsp</module>
     </modules>
 
     <parent>
