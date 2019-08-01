@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/filter/filter.iml" filepath="$PROJECT_DIR$/filter/filter.iml" />
       <module fileurl="file://$PROJECT_DIR$/listener/listener.iml" filepath="$PROJECT_DIR$/listener/listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet/servlet.iml" filepath="$PROJECT_DIR$/servlet/servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/static-resource/static-resource.iml" filepath="$PROJECT_DIR$/static-resource/static-resource.iml" />
     </modules>
   </component>
 </project>

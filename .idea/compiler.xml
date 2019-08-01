@@ -9,6 +9,7 @@
         <module name="filter" />
         <module name="listener" />
         <module name="servlet" />
+        <module name="static-resource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="filter" target="1.7" />
       <module name="listener" target="1.7" />
       <module name="servlet" target="1.7" />
+      <module name="static-resource" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -24,6 +26,7 @@
       <module name="filter" options="-parameters" />
       <module name="listener" options="-parameters" />
       <module name="servlet" options="-parameters" />
+      <module name="static-resource" options="-parameters" />
     </option>
   </component>
 </project>

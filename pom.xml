@@ -8,6 +8,7 @@
         <module>servlet</module>
         <module>filter</module>
         <module>listener</module>
+        <module>static-resource</module>
     </modules>
 
     <parent>
