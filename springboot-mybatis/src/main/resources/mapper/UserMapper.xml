@@ -20,4 +20,8 @@
         </selectKey>
         insert into user(id,name,age) values(#{id},#{name},#{age})
     </insert>
+
+    <select id="selUser" resultType="User">
+        select id,name,age from user
+    </select>
 </mapper>
