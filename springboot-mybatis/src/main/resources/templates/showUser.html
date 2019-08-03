@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,16 @@
         <th>ID</th>
         <th>Name</th>
         <th>Age</th>
+        <th>操作</th>
     </tr>
     <tr th:each="user : ${list}">
         <td th:text="${user.id}"></td>
         <td th:text="${user.name}"></td>
         <td th:text="${user.age}"></td>
+        <td>
+           <a th:href="@{/user/delete(id=${user.id})}">删除用户</a>-->
+            <a th:href="@{/user/selById(id=${user.id})}">更新用户</a>
+        </td>
     </tr>
 </table>
 

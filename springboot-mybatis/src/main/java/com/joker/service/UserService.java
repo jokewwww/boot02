@@ -13,5 +13,10 @@ public interface UserService {
 
     List<User> selUser();
 
+    User byId(int id);
+
+    int updUser(User user);
+
+    int delById(int id);
 
 }

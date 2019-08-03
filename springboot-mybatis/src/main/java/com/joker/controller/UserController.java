@@ -5,7 +5,7 @@ import com.joker.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -40,4 +40,25 @@ public class UserController {
         return "showUser";
 
     }
+
+    @RequestMapping("/selById")
+    public String selUserById(String id,Model model){
+
+        User user = userService.byId(Integer.parseInt(id));
+        model.addAttribute("user",user);
+        return "updUser";
+    }
+
+    @RequestMapping("edit")
+    public String updUser(User user){
+        userService.updUser(user);
+        return "ok";
+    }
+
+    @RequestMapping("delete")
+    public String delById(int id){
+        userService.delById(id);
+        return "redirect:/user/users";
+    }
+
 }

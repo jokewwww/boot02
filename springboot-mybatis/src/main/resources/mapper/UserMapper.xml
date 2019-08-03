@@ -24,4 +24,17 @@
     <select id="selUser" resultType="User">
         select id,name,age from user
     </select>
+
+    <select id="selUserById" resultType="User" parameterType="int">
+        select id,name,age from user where id=#{id}
+    </select>
+
+    <update id="updUser" parameterType="User">
+        update user set name=#{name},age=#{age} where id=#{id}
+    </update>
+
+    <delete id="delById" parameterType="int">
+        delete from user where id=#{id}
+    </delete>
+
 </mapper>

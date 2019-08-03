@@ -25,4 +25,19 @@ public class UserServiceImpl implements UserService{
     public List<User> selUser() {
         return userMapper.selUser();
     }
+
+    @Override
+    public User byId(int id) {
+        return userMapper.selUserById(id);
+    }
+
+    @Override
+    public int updUser(User user) {
+        return userMapper.updUser(user);
+    }
+
+    @Override
+    public int delById(int id) {
+        return userMapper.delById(id);
+    }
 }
