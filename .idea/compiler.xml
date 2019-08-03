@@ -13,6 +13,7 @@
         <module name="listener" />
         <module name="servlet" />
         <module name="springboot-mybatis" />
+        <module name="springboot-senior" />
         <module name="static-resource" />
         <module name="thymeleaf" />
       </profile>
@@ -26,6 +27,7 @@
       <module name="listener" target="1.7" />
       <module name="servlet" target="1.7" />
       <module name="springboot-mybatis" target="1.7" />
+      <module name="springboot-senior" target="1.7" />
       <module name="static-resource" target="1.7" />
       <module name="thymeleaf" target="1.7" />
     </bytecodeTargetLevel>
@@ -40,6 +42,7 @@
       <module name="listener" options="-parameters" />
       <module name="servlet" options="-parameters" />
       <module name="springboot-mybatis" options="-parameters" />
+      <module name="springboot-senior" options="-parameters" />
       <module name="static-resource" options="-parameters" />
       <module name="thymeleaf" options="-parameters" />
     </option>

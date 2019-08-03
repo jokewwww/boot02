@@ -14,6 +14,7 @@
         <module>freemarker</module>
         <module>thymeleaf</module>
         <module>springboot-mybatis</module>
+        <module>springboot-senior</module>
     </modules>
 
     <parent>
