@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)//springBoot启动器
 public class UserServiceTest {
 
-    @Resource
+    @Autowired
     private UserService userService;
 
     @Test
