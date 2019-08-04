@@ -19,6 +19,7 @@
         <module>springboot-exception-two</module>
         <module>springboot-exception-three</module>
         <module>springboot-exception-four</module>
+        <module>springboot-exception-five</module>
     </modules>
 
     <parent>
