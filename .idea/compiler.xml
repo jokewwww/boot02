@@ -12,10 +12,12 @@
         <module name="jsp" />
         <module name="listener" />
         <module name="servlet" />
+        <module name="springboot-data-jpa" />
         <module name="springboot-exception-five" />
         <module name="springboot-exception-four" />
         <module name="springboot-exception-one" />
         <module name="springboot-exception-three" />
+        <module name="Springboot-junit" />
         <module name="springboot-mybatis" />
         <module name="springboot-senior" />
         <module name="static-resource" />
@@ -30,11 +32,13 @@
       <module name="jsp" target="1.7" />
       <module name="listener" target="1.7" />
       <module name="servlet" target="1.7" />
+      <module name="springboot-data-jpa" target="1.7" />
       <module name="springboot-exception-five" target="1.7" />
       <module name="springboot-exception-four" target="1.7" />
       <module name="springboot-exception-one" target="1.7" />
       <module name="springboot-exception-three" target="1.7" />
       <module name="springboot-exception-two" target="1.7" />
+      <module name="Springboot-junit" target="1.7" />
       <module name="springboot-mybatis" target="1.7" />
       <module name="springboot-senior" target="1.7" />
       <module name="static-resource" target="1.7" />
@@ -43,6 +47,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Springboot-junit" options="-parameters" />
       <module name="boot02" options="-parameters" />
       <module name="file-upload" options="-parameters" />
       <module name="filter" options="-parameters" />
@@ -50,6 +55,7 @@
       <module name="jsp" options="-parameters" />
       <module name="listener" options="-parameters" />
       <module name="servlet" options="-parameters" />
+      <module name="springboot-data-jpa" options="-parameters" />
       <module name="springboot-exception-five" options="-parameters" />
       <module name="springboot-exception-four" options="-parameters" />
       <module name="springboot-exception-one" options="-parameters" />
