@@ -15,6 +15,7 @@
         <module>thymeleaf</module>
         <module>springboot-mybatis</module>
         <module>springboot-senior</module>
+        <module>springboot-exception-one</module>
     </modules>
 
     <parent>

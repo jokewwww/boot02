@@ -7,12 +7,10 @@ import javax.validation.constraints.NotBlank;
  * springboot的校验规则
  */
 public class User {
-
-    @NotBlank//非空校验
+    @NotBlank(message = "用户名不能为空")
     private String name;
-    @NotBlank
+    @NotBlank(message = "密码不能为空")
     private String password;
-
     private int age;
 
     public User() {}
