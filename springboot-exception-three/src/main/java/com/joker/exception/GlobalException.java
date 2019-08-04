@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * 全局异常处理类
+ */
 @ControllerAdvice
 public class GlobalException {
 

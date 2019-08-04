@@ -18,6 +18,7 @@
         <module>springboot-exception-one</module>
         <module>springboot-exception-two</module>
         <module>springboot-exception-three</module>
+        <module>springboot-exception-four</module>
     </modules>
 
     <parent>

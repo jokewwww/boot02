@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/jsp/jsp.iml" filepath="$PROJECT_DIR$/jsp/jsp.iml" />
       <module fileurl="file://$PROJECT_DIR$/listener/listener.iml" filepath="$PROJECT_DIR$/listener/listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet/servlet.iml" filepath="$PROJECT_DIR$/servlet/servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-exception-four/springboot-exception-four.iml" filepath="$PROJECT_DIR$/springboot-exception-four/springboot-exception-four.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-exception-one/springboot-exception-one.iml" filepath="$PROJECT_DIR$/springboot-exception-one/springboot-exception-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-exception-three/springboot-exception-three.iml" filepath="$PROJECT_DIR$/springboot-exception-three/springboot-exception-three.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" filepath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" />

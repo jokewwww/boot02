@@ -12,6 +12,7 @@
         <module name="jsp" />
         <module name="listener" />
         <module name="servlet" />
+        <module name="springboot-exception-four" />
         <module name="springboot-exception-one" />
         <module name="springboot-exception-three" />
         <module name="springboot-mybatis" />
@@ -28,6 +29,7 @@
       <module name="jsp" target="1.7" />
       <module name="listener" target="1.7" />
       <module name="servlet" target="1.7" />
+      <module name="springboot-exception-four" target="1.7" />
       <module name="springboot-exception-one" target="1.7" />
       <module name="springboot-exception-three" target="1.7" />
       <module name="springboot-exception-two" target="1.7" />
@@ -46,6 +48,7 @@
       <module name="jsp" options="-parameters" />
       <module name="listener" options="-parameters" />
       <module name="servlet" options="-parameters" />
+      <module name="springboot-exception-four" options="-parameters" />
       <module name="springboot-exception-one" options="-parameters" />
       <module name="springboot-exception-three" options="-parameters" />
       <module name="springboot-exception-two" options="-parameters" />
