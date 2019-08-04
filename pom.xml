@@ -16,6 +16,7 @@
         <module>springboot-mybatis</module>
         <module>springboot-senior</module>
         <module>springboot-exception-one</module>
+        <module>springboot-exception-two</module>
     </modules>
 
     <parent>

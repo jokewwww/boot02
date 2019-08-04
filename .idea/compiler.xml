@@ -28,6 +28,7 @@
       <module name="listener" target="1.7" />
       <module name="servlet" target="1.7" />
       <module name="springboot-exception-one" target="1.7" />
+      <module name="springboot-exception-two" target="1.7" />
       <module name="springboot-mybatis" target="1.7" />
       <module name="springboot-senior" target="1.7" />
       <module name="static-resource" target="1.7" />
@@ -44,6 +45,7 @@
       <module name="listener" options="-parameters" />
       <module name="servlet" options="-parameters" />
       <module name="springboot-exception-one" options="-parameters" />
+      <module name="springboot-exception-two" options="-parameters" />
       <module name="springboot-mybatis" options="-parameters" />
       <module name="springboot-senior" options="-parameters" />
       <module name="static-resource" options="-parameters" />
