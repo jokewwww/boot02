@@ -22,6 +22,7 @@
         <module>springboot-exception-five</module>
         <module>Springboot-junit</module>
         <module>springboot-data-jpa</module>
+        <module>springbooteh-cache</module>
     </modules>
 
     <parent>

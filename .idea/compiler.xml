@@ -20,6 +20,7 @@
         <module name="Springboot-junit" />
         <module name="springboot-mybatis" />
         <module name="springboot-senior" />
+        <module name="springbooteh-cache" />
         <module name="static-resource" />
         <module name="thymeleaf" />
       </profile>
@@ -41,6 +42,7 @@
       <module name="Springboot-junit" target="1.7" />
       <module name="springboot-mybatis" target="1.7" />
       <module name="springboot-senior" target="1.7" />
+      <module name="springbooteh-cache" target="1.8" />
       <module name="static-resource" target="1.7" />
       <module name="thymeleaf" target="1.7" />
     </bytecodeTargetLevel>
@@ -63,6 +65,7 @@
       <module name="springboot-exception-two" options="-parameters" />
       <module name="springboot-mybatis" options="-parameters" />
       <module name="springboot-senior" options="-parameters" />
+      <module name="springbooteh-cache" options="-parameters" />
       <module name="static-resource" options="-parameters" />
       <module name="thymeleaf" options="-parameters" />
     </option>
