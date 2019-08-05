@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-exception-one/springboot-exception-one.iml" filepath="$PROJECT_DIR$/springboot-exception-one/springboot-exception-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-exception-three/springboot-exception-three.iml" filepath="$PROJECT_DIR$/springboot-exception-three/springboot-exception-three.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" filepath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-redis/springboot-redis.iml" filepath="$PROJECT_DIR$/springboot-redis/springboot-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-senior/springboot-senior.iml" filepath="$PROJECT_DIR$/springboot-senior/springboot-senior.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbooteh-cache/springbooteh-cache.iml" filepath="$PROJECT_DIR$/springbooteh-cache/springbooteh-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/static-resource/static-resource.iml" filepath="$PROJECT_DIR$/static-resource/static-resource.iml" />

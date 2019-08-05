@@ -23,6 +23,7 @@
         <module>Springboot-junit</module>
         <module>springboot-data-jpa</module>
         <module>springbooteh-cache</module>
+        <module>springboot-redis</module>
     </modules>
 
     <parent>
