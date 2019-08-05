@@ -4,13 +4,16 @@ package com.joker.test;
 import com.joker.DataApplication;
 import com.joker.dao.UserRepository;
 import com.joker.dao.UserRepositoryByName;
+import com.joker.dao.UserRepositoryQuery;
 import com.joker.pojo.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,6 +27,9 @@ public class UserRepositoryTest {
 
     @Autowired
     UserRepositoryByName userRepositoryByName;
+
+    @Autowired
+    UserRepositoryQuery userRepositoryQuery;
 
 
     @Test
@@ -57,5 +63,32 @@ public class UserRepositoryTest {
         for (User user :like ) {
             System.out.println(user);
         }
+    }
+
+    /**
+     * @Query的测试
+     */
+    @Test
+    public void test4(){
+        List<User> zhangsan = userRepositoryQuery.queryByNameHQL("zhangsan");
+        for (User user :zhangsan ) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    public void test5(){
+        List<User> queryByNamSQL = userRepositoryQuery.queryByNamSQL("zhangsan");
+        for (User user :queryByNamSQL ) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    @Transactional
+    @Rollback(false)
+    public void test6(){
+
+        userRepositoryQuery.updateNameById("zhangliu",2);
     }
 }
