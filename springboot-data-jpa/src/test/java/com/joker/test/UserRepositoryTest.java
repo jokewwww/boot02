@@ -4,6 +4,7 @@ package com.joker.test;
 import com.joker.DataApplication;
 import com.joker.dao.*;
 import com.joker.pojo.User;
+import org.assertj.core.internal.Predicates;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +16,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.domain.Sort.Order;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -41,6 +49,9 @@ public class UserRepositoryTest {
 
     @Autowired
     private UserPagingAndSortingRepository userPagingAndSortingRepository;
+
+    @Autowired
+    private UserJPASpecificationExecutor specificationExecutor;
 
     @Test
     public void testSave(){
@@ -179,6 +190,60 @@ public class UserRepositoryTest {
         }
     }
 
+    /**
+     * UserJPASpecificationExecutor 单条件查询
+     */
+    @Test
+    public void test15(){
+        Specification<User> specification = new Specification<User>() {
+            /**
+             *
+             * @param root :查询对象的属性的封装
+             * @param criteriaQuery :封装了我们要执行的拆线呢的各个部分的信息(select,from)
+             * @param criteriaBuilder: 查询条件的构造器,定义不同的查询条件
+             * @return
+             */
+            @Override
+            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                Predicate predicate = criteriaBuilder.equal(root.get("name"), "zhangsan");
+                return predicate;
+            }
+        };
+        List<User> userList = specificationExecutor.findAll(specification);
+
+        for (User user :userList ) {
+            System.out.println(user);
+        }
+    }
+
+
+    /**
+     * 多条件拆查询
+     */
+    @Test
+    public void test16(){
+        Specification<User> specification = new Specification<User>() {
+
+            @Override
+            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                List<Predicate> list=new ArrayList();
+                list.add(criteriaBuilder.equal(root.get("name"),"zhangsan"));
+                list.add(criteriaBuilder.equal(root.get("id"),1));
+
+                Predicate[] arr=new Predicate[list.size()];
+
+                return criteriaBuilder.and(list.toArray(arr));
+
+            }
+
+
+        };
+        List<User> specificationExecutorAll = specificationExecutor.findAll(specification);
+
+        for (User user :specificationExecutorAll ) {
+            System.out.println(user);
+        }
+    }
 
 
 
