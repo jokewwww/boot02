@@ -52,6 +52,16 @@ public class EhcacheTest {
         for (User user:byPage ) {
             System.out.println(user);
         }
+    }
+
+    @Test
+    public void test3(){
+        System.out.println(userService.findUserAll().size());
+
+        User user = new User("zhadsda", 33, "aaf2e");
+
+        userService.saveUser(user);
+        System.out.println(userService.findUserAll().size());
 
 
     }
