@@ -2,6 +2,7 @@ package com.joker.test;
 
 
 import com.joker.DataApplication;
+import com.joker.dao.UserCrudRepository;
 import com.joker.dao.UserRepository;
 import com.joker.dao.UserRepositoryByName;
 import com.joker.dao.UserRepositoryQuery;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @SpringBootTest(classes= {DataApplication.class})
@@ -30,6 +32,9 @@ public class UserRepositoryTest {
 
     @Autowired
     UserRepositoryQuery userRepositoryQuery;
+
+    @Autowired
+    private UserCrudRepository userCrudRepository;
 
 
     @Test
@@ -91,4 +96,33 @@ public class UserRepositoryTest {
 
         userRepositoryQuery.updateNameById("zhangliu",2);
     }
+
+    @Test
+    public void test7(){
+        User user = new User("liwang", 24, "太平洋");
+        user.setId(3);
+        userCrudRepository.save(user);
+    }
+
+    @Test
+    public void test8(){
+        User user = userCrudRepository.findById(2).get();
+        System.out.println(user);
+    }
+
+    @Test
+    public void test9(){
+        Iterable<User> all = userCrudRepository.findAll();
+        for (User user :all ) {
+            System.out.println(user);
+        }
+
+    }
+
+    @Test
+    public void test10(){
+        userCrudRepository.deleteById(2);
+    }
+
+
 }

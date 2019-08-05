@@ -32,7 +32,7 @@
       <module name="jsp" target="1.7" />
       <module name="listener" target="1.7" />
       <module name="servlet" target="1.7" />
-      <module name="springboot-data-jpa" target="1.7" />
+      <module name="springboot-data-jpa" target="1.8" />
       <module name="springboot-exception-five" target="1.7" />
       <module name="springboot-exception-four" target="1.7" />
       <module name="springboot-exception-one" target="1.7" />
