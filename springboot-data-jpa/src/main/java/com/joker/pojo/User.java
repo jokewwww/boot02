@@ -20,7 +20,19 @@ public class User {
   @Column(name = "address")
   private String address;
 
+  @JoinColumn(name="role_id")//外键
+  @ManyToOne(cascade = CascadeType.PERSIST)
+  private Role role;
+
   public User() {}
+
+  public Role getRole() {
+    return role;
+  }
+
+  public void setRole(Role role) {
+    this.role = role;
+  }
 
   public User(String name, Integer age, String address) {
     this.name = name;

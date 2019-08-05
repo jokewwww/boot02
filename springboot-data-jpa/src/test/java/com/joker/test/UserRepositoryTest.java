@@ -245,7 +245,41 @@ public class UserRepositoryTest {
         }
     }
 
+    /**
+     * 多条件查询第二种方法
+     */
+    @Test
+    public void test17(){
 
+        Specification<User> specification = new Specification<User>() {
 
+            @Override
+            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                return criteriaBuilder.and(criteriaBuilder.equal(root.get("name"),"zhangsan"),criteriaBuilder.equal(root.get("age"),23));
+            }
+        };
+        List<User> executorAll = specificationExecutor.findAll(specification);
+        for (User user:executorAll ) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    public void test18(){
+        Specification<User> specification = new Specification<User>() {
+
+            @Override
+            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                return criteriaBuilder.or(criteriaBuilder.and(criteriaBuilder.equal(root.get("name"),"zhangsan"),criteriaBuilder.equal(root.get("age"),23)),criteriaBuilder.equal(root.get("id"),2));
+            }
+        };
+
+        Sort sort=new Sort(new Order(Direction.DESC,"id"));
+
+        List<User> users = specificationExecutor.findAll(specification,sort);
+        for (User user:users ) {
+            System.out.println(user);
+        }
+    }
 
 }
